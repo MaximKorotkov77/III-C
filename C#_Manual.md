@@ -27,3 +27,6 @@ while(a<10 || a>0)
 
 string s = Console.ReadLine();
 string a = Convert.ToString(s[2]); __взять символ с индексом 2__
+
+int num = new Random().Next(10, 100); __Random__ от 10 до 99
+Console.WriteLine($"Число {num}");
