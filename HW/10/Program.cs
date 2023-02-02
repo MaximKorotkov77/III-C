@@ -6,14 +6,11 @@
 // 918 -> 1
 
 Console.Clear();
-Console.WriteLine("Введите трехзначное число:");
+Console.WriteLine("Введите трехзначное число: ");
 int a = int.Parse(Console.ReadLine());
-if((a>=100) && (a<1000))
+while((a<100) || (a>1000))
 {
-    Console.WriteLine($"{a} -> {a/10 - 10*(a/100)}");
+    Console.WriteLine("неверное число, введите трехзначное");
+    a = int.Parse(Console.ReadLine());
 }
-else
-{
-    Console.WriteLine("Введите трехзначное число!");
-}
-   
+ Console.WriteLine($"{a} -> {a/10 - 10*(a/100)}"); 
