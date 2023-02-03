@@ -30,3 +30,27 @@ string a = Convert.ToString(s[2]); __взять символ с индексом
 
 int num = new Random().Next(10, 100); __Random__ от 10 до 99
 Console.WriteLine($"Число {num}");
+
+int [] array = {1,2,3,4,5,6,7,8,9}; __array__
+int n = array.Length; __array__ __lengt__
+
+
+int Max(int arg1, int arg2, int arg3) __function__
+{
+    int result = arg1;
+    if(arg2>arg1) result = arg2;
+    if(arg3>arg2) result = arg3;
+    return result;
+}
+int max = Max ( Max(a1, a2, a3), Max(b1, b2, b3), Max(c1, c2, c3));
+
+void FillArray(int[] collection) __FillArray__
+{
+    int length = collection.Length;
+    int i = 0;
+    while (i<length)
+    {
+        collection[i] = new Random().Next(1,10);
+        i++;
+    }
+}
