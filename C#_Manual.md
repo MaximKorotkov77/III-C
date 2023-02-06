@@ -54,3 +54,16 @@ void FillArray(int[] collection) __FillArray__
         i++;
     }
 }
+
+switch (x)  __switch__
+{
+    case 1:
+    {
+        Console.WriteLine("x>0 && y>0");
+        break;
+    }
+      default:
+    {
+        Console.WriteLine("type 1 2 3 4");
+        break;
+    }}
