@@ -32,7 +32,8 @@ int num = new Random().Next(10, 100); __Random__ от 10 до 99
 Console.WriteLine($"Число {num}");
 
 int [] array = {1,2,3,4,5,6,7,8,9}; __array__
-int n = array.Length; __array__ __lengt__
+int [] array = new int [N];  или такой __array__
+int n = array.Length; __array__ __length__
 
 
 int Max(int arg1, int arg2, int arg3) __function__
@@ -67,3 +68,9 @@ switch (x)  __switch__
         Console.WriteLine("type 1 2 3 4");
         break;
     }}
+                                                                    __Math.Sqrt__
+    double dist = Math.Sqrt((x1 -x2)*(x1 -x2) + (y1 -y2)*(y1 -y2));  __корень__
+    double dist = Math.Sqrt(Math.Pow(x1 -x2, 2) __степень__
+    Console.WriteLine($"dist={dist:f3}") __округление __три знака после запятой__
+
+for (int i = 0; i < n; i++) __цикл for__
