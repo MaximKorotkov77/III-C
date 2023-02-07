@@ -35,6 +35,11 @@ int [] array = {1,2,3,4,5,6,7,8,9}; __array__
 int [] array = new int [N];  или такой __array__
 int n = array.Length; __array__ __length__
 
+int[] array = new int [n];
+for (int i = 0; i<n; i++)
+{
+    array[i] = int.Parse(Console.ReadLine());
+}
 
 int Max(int arg1, int arg2, int arg3) __function__
 {
@@ -74,3 +79,7 @@ switch (x)  __switch__
     Console.WriteLine($"dist={dist:f3}") __округление __три знака после запятой__
 
 for (int i = 0; i < n; i++) __цикл for__
+
+n += ; // __n = n+1__
+n /= 10; // __n = n/10__
+n *= (-1);  // __n = -1*n__
