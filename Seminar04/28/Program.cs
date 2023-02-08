@@ -8,13 +8,13 @@ Console.WriteLine("Введите число N");
 int N = int.Parse(Console.ReadLine());
 int MULT(int a)
 {
-    int mult = 1;
-    int i = 1;
-    while (i<=N);
+    int result = 1;
+        for (int i =1; i<=N; i++ )
+        
     {
-        mult = mult * i;
-        i++;
+        result *= i;
+        
     }
-    return mult;
+    return result;
 }
 Console.WriteLine($"{MULT(N)}");
