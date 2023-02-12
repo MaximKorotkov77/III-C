@@ -15,7 +15,7 @@ int [] FillArray(int n)
     }
     return array;
 }
-FillArray(6);
+// FillArray(6);
 // int ODD(int [] arr)
 // {
 //      for(int i =0; i<arr.Length; i++)
@@ -29,18 +29,21 @@ FillArray(6);
 //     }
     
 // }
-int [] arr = FillArray(6);
-     for(int i =0; i<6; i++)
+int [] arr = FillArray(10);
+int odd = 0;
+     for(int i =0; i<arr.Length; i++)
      {
      
-    int odd = 0;
+        
          if(arr[i] %2==0)
          {
              odd = odd +1;
          }
-  return odd;
+        //  else if (arr[i] %2 !=0)
+        //  {odd = odd +0;}
+    
      }
-Console.WriteLine($"[{String.Join(", ", FillArray(6))}]");
+Console.WriteLine($"[{String.Join(", ", arr)}]");
 Console.WriteLine();
-// Console.WriteLine($"{ODD(FillArray(6))}");
-Console.WriteLine($"[{odd}");
+//  Console.WriteLine($"{ODD(FillArray(6))}");
+ Console.WriteLine($"{odd}");
