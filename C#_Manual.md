@@ -85,3 +85,12 @@ n += ; // __n = n+1__
 n /= 10; // __n = n/10__
 n *= (-1);  // __n = -1*n__
 n *= i;// __n = n*i__
+
+foreach (int el in array) // [1,2,5,7,9] __foreach__
+{
+    positiveSum += el > 0 ? : 0;
+    negativeSum += el < 0 ? : 0;
+
+}
+
+string[] nums = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries); // __Split__ - разбивает строку в массив
