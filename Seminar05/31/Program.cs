@@ -51,5 +51,4 @@ foreach (int el in array) // [1,2,5,7,9] __foreach__
 {
     positiveSum += el > 0 ? : 0;
     negativeSum += el < 0 ? : 0;
-
 }

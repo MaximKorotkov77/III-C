@@ -5,9 +5,9 @@
 // [345, 897, 568, 234] -> 2
 
 Console.Clear();
+
 int [] FillArray(int n)
 {   
-
     int [] array = new int [n];
         for(int i =0; i<n; i++)
     {
@@ -15,35 +15,21 @@ int [] FillArray(int n)
     }
     return array;
 }
-// FillArray(6);
-// int ODD(int [] arr)
-// {
-//      for(int i =0; i<arr.Length; i++)
-     
-//     {int odd = 0;
-//          if(arr[i] %2==0)
-//          {
-//              odd = odd +1;
-//          }
-//         return odd;
-//     }
-    
-// }
-int [] arr = FillArray(10);
-int odd = 0;
-     for(int i =0; i<arr.Length; i++)
-     {
-     
-        
-         if(arr[i] %2==0)
-         {
-             odd = odd +1;
-         }
-        //  else if (arr[i] %2 !=0)
-        //  {odd = odd +0;}
-    
-     }
-Console.WriteLine($"[{String.Join(", ", arr)}]");
-Console.WriteLine();
-//  Console.WriteLine($"{ODD(FillArray(6))}");
- Console.WriteLine($"{odd}");
+
+int [] arr1 = FillArray(10);
+
+int FINDEVEN (int [] arr)
+{ 
+    int even = 0;
+    foreach (int el in arr) 
+{
+    even += el %2 ==0 ? 1 : 0;
+}
+
+return even;
+}
+
+FINDEVEN (arr1);
+
+Console.Write($"[{String.Join(", ", arr1)}]");
+Console.Write ($" -> {FINDEVEN (arr1)}");

@@ -88,9 +88,38 @@ n *= i;// __n = n*i__
 
 foreach (int el in array) // [1,2,5,7,9] __foreach__
 {
-    positiveSum += el > 0 ? : 0;
-    negativeSum += el < 0 ? : 0;
-
+    positiveSum += el > 0 ? el : 0;
+    negativeSum += el < 0 ? el : 0;
 }
 
 string[] nums = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries); // __Split__ - разбивает строку в массив
+
+string [] st = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries); 
+int a = int.Parse(st[0]), b = int.Parse(st[1]), c = int.Parse(st[2]); // __Split__ - __int через строку в терминале__
+
+int[] GetArrayFromString(string stringArray) // __Split__ задача 33. __Ввод массива через строку в терминале.__
+{
+    string[] nums = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+    int[] res = new int[nums.Length];
+
+    for (int i = 0; i < nums.Length; i++)
+    {
+        res[i] = int.Parse(nums[i]);
+    }
+    return res;
+}
+
+bool FindElement(int[] array, int el)//[1,2,3,4] 5 __bool__ Задача 33 __Выводит 1 или 0, да или нет__
+{
+    foreach (var item in array)//
+    {
+        if (el == item) // 5 == 4
+            return true; 
+    }
+    return false;
+}
+
+bool IsTriangle(int a, int b, int c) __bool__ Задача 40 __Выводит 1 или 0, задача на да или нет__
+{
+    return ((a+b > c) && (c+b > a) && (c+a > b));
+}
