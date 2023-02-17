@@ -123,3 +123,15 @@ bool IsTriangle(int a, int b, int c) __bool__ Задача 40 __Выводит 1
 {
     return ((a+b > c) && (c+b > a) && (c+a > b));
 }
+
+string [,] table = new string [2,3]; // задаются __двумерные массивы__
+int [,] matrix = new int [3,4];
+
+for (int i =0; i<matrix.GetLength(0); i++)
+{
+    for(int j=0; j<matrix.GetLength(1); j++)
+    {
+        Console.Write($"{matrix[i, j]} ");
+    }
+Console.WriteLine();
+}
