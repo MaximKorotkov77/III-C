@@ -137,3 +137,35 @@ Console.WriteLine();
 }
 
 double m = new Random().NextDouble()*(5) + 2; // __Вещественные числа__
+
+
+int[] GetRowArray(int[,] inArray) // __Двумерный массив в одномерный. Задача 57__
+{
+    int[] result = new int[inArray.GetLength(0) * inArray.GetLength(1)];
+    int index = 0;
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            result[index] = inArray[i, j];
+            index++;
+        }
+    }
+    return result;
+}
+
+void SortArray(int[] inArray)  // __Пузырьковая сортировка. Задача 57__
+{
+    for (int i = 0; i < inArray.Length; i++)
+    {
+        for (int j = i + 1; j < inArray.Length; j++)
+        {
+            if (inArray[i] > inArray[j])
+            {
+                int k = inArray[i];
+                inArray[i] = inArray[j];
+                inArray[j] = k;
+            }
+        }
+    }
+}

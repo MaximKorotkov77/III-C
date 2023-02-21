@@ -10,6 +10,15 @@
 // 5 9 2 3
 // 1 4 7 2
 
+using System;
+using static System.Console;
+
+Clear();
+
+Write("Введите количество строк массива: ");
+int rows = int.Parse(ReadLine());
+Write("Введите количество столбцов массива: ");
+int columns = int.Parse(ReadLine());
 Console.Clear();
 int [,] matrix = new int [4,4];
 int a = 1;
