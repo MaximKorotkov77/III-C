@@ -80,20 +80,17 @@ int Findmin_j (int [,] inArray)
     return min_j;
 }
 
+
 int[,] ChangeArray(int[,] inArray, int min_i, int min_j)
 {
-    int[,] result = new int[inArray.GetLength(0)-1, inArray.GetLength(1)-1];
+    int[,] result = new int[inArray.GetLength(0), inArray.GetLength(1)-1];
     for (int i = 0; i < result.GetLength(0); i++)
-    {
-    
+    { 
+             
         for (int j = 0; j < result.GetLength(1); j++)
          {  
-            if (i >= min_i) 
-            {
-                 result[i, j] = inArray[i+1,j];
-            }
-
-            else if (j >= min_j) 
+            
+            if (j >= min_j) 
             {
                 result[i, j] = inArray[i,j+1];
              }
@@ -102,11 +99,32 @@ int[,] ChangeArray(int[,] inArray, int min_i, int min_j)
             {
             result[i, j] = inArray[i,j];
             }
-         }
-        
+         
+        }
     }
-    return result;
+
+        int[,] result2 = new int[result.GetLength(0)-1, result.GetLength(1)];
+        for (int j = 0; j < result2.GetLength(0); j++)
+        { 
+             
+        for (int i = 0; i < result.GetLength(1); i++)
+         {  
+            if (i >= min_i) 
+            {
+                 result2[i, j] = result[i+1,j];
+            }
+                  
+            else
+            {
+            result2[i, j] = result[i,j];
+            }
+         
+        }
+
+    }
+    return result2;
 }
+
 
 int [,] Array= GetArray(m, n);
 PrintArray(Array);
@@ -117,4 +135,5 @@ WriteLine($"{min_i} {min_j}");
 WriteLine();
 ChangeArray(Array, min_i, min_j);
 PrintArray(ChangeArray(Array, min_i, min_j));
+
 
