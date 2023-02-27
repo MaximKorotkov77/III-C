@@ -21,27 +21,28 @@
 // Ответ:
 // No
 
+
 Console.Clear();
 
 Console.WriteLine("Введите размер массива");
 int m = int.Parse(Console.ReadLine());
 
 
-int [,] TypeArray(int m)
+char[,] TypeArray(int m)
 {
     Console.WriteLine("Введите эл-ты массива");
-    int [,] newArray = new int [m,m];
+    char [,] newArray = new char [m,m];
     for(int i=0; i<m; i++)
     {
         for(int j=0; j<m; j++)
         {
-        newArray [i,j] = int.Parse(Console.ReadLine());
+        newArray [i,j] = char.Parse(Console.ReadLine());
         }
     }
     return newArray;
 }
 
-void PrintArray(int [,] array)
+void PrintArray(char [,] array)
 {
     for(int i=0; i<array.GetLength(0); i++)
     {
@@ -54,20 +55,7 @@ void PrintArray(int [,] array)
 }
 
 
-// int [,] DesignArray( int [,] array)
-// {
-// int [,] B = new int [array.GetLength(0)-1, array.GetLength(0)-1];
-// for (int i=0; i<B.GetLength(0);i++)
-// {
-//     for (int j=0; j<B.GetLength(0);j++)
-//     {
-//              B[i,j] = array[i,j]*array[i+1,j];
-//     }
-// }
-// return B;
-// }
-
-bool DesignArray( int [,] A)
+bool DesignArray( char [,] A)
 {
 for (int i=0; i<A.GetLength(0)-1;i++)
 {
@@ -83,14 +71,11 @@ for (int i=0; i<A.GetLength(0)-1;i++)
 return false;
 }
 
-int [,] array = TypeArray(m);
+char [,] array = TypeArray(m);
 PrintArray(array);
 Console.WriteLine();
-// int [,] arrayB = DesignArray(array);
-// PrintArray(arrayB);
+
 if (DesignArray(array))
-{Console.WriteLine("yes");}
+{Console.WriteLine("ответ: yes");}
 else
-{Console.WriteLine("no");}
-
-
+{Console.WriteLine("ответ: no");}
